@@ -1,0 +1,54 @@
+<h2>Users</h2>
+
+<div class="row">
+  <div class="col-md-4">
+      <input type="text" class="form-control" placeholder="Search...">
+  </div>
+  <div class="col-md-1">
+    <button class="btn btn-success">Search</button>
+  </div>
+
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone#</th>
+      <th>Company</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" (click)="goToDetails(user.id)">
+      <td>
+        <span *ngIf="!isEditable(user.id)">{{user.name}}</span>
+        <input type="text" [(ngModel)]="user.name" *ngIf="isEditable(user.id)" class="form-control" />
+      </td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.company.name}}</td>
+      <td>
+        <!-- <a [routerLink]="user.id">Ver detalle</a> -->
+        <a (click)="editUser(user, $event)"><i class="fas fa fa-pencil"></i></a>
+        <!-- <a (click)="goToDetails(user.id)">Ver detalle</a> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <h2>Datatable</h2>
+<input
+        type='text'
+        placeholder='Search...'
+        (keyup)='updateFilter($event)'
+      />
+<ngx-datatable class="material"
+    #table
+    [rows]="users"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="0"
+    [rowHeight]="50"
+    [columns]="columns">
+  </ngx-datatable> -->

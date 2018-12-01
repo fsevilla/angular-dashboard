@@ -1,0 +1,8 @@
+@import '../global/scss/tables';
+
+.container {
+    .row:nth-child(2n) {
+        background-color: #f0f0f0;
+        line-height: 36px;
+    }
+}

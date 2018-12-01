@@ -1,0 +1,31 @@
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+
+table.items-list{
+    width: 100%;
+    border: solid 1px #999;
+
+    th {
+        text-align: left;
+        border-bottom: 1px solid #999;
+    }
+
+    td {
+        padding: 6px 15px;
+    }
+
+    tr {
+        &:nth-child(2n) {
+            background-color: #f0f0f0;
+        } 
+    }
+}
+
+
+table.table {
+    tr {
+        &:nth-child(2n) {
+            background-color: #f0f0f0;
+        } 
+    }
+}
