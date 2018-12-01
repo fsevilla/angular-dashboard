@@ -15,6 +15,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserStatusDirective } from './global/directives/user-status.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     NotFoundComponent,
     HomepageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UserStatusDirective
   ],
   imports: [
     BrowserModule,

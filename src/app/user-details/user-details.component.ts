@@ -34,10 +34,7 @@ export class UserDetailsComponent implements OnInit {
     this.userService.getUserDetails(this.userId)
       .then(response => {
         this.user = response;
-        console.log('User details: ', this.user);
-        setTimeout(() => {
-          this.dataLoading = false;
-        }, 2000);
+        this.dataLoading = false;
       })
       .catch(error => {
         console.log('Error: ', error);

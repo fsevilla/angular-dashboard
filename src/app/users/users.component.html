@@ -20,7 +20,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users" (click)="goToDetails(user.id)">
+    <tr *ngFor="let user of users" (click)="goToDetails(user.id)" [appUserStatus]="user">
       <td>
         <span *ngIf="!isEditable(user.id)">{{user.name}}</span>
         <input type="text" [(ngModel)]="user.name" *ngIf="isEditable(user.id)" class="form-control" />
